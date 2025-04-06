@@ -1,0 +1,17 @@
+﻿[
+  {
+    "node_labels": [
+      "User"
+    ],
+    "node_props": {
+      "mtn": "9729986610"
+    },
+    "rel_type": "ACCESSED_FROM",
+    "rel_props": {
+      "count": 1
+    },
+    "target_labels": [
+      "IP"
+    ]
+  }
+]
