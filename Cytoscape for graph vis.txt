@@ -1,3 +1,5 @@
+<!-- Cytoscape.js is a flexible graph visualization library that doesn't connect directly to Neo4j, so you need to fetch data from a backend API separately, parse it into its format, and manually define all styles and layouts, offering full control over appearance but requiring more setup. -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
