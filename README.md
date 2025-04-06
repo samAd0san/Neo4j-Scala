@@ -73,3 +73,11 @@ import org.neo4j.driver.{AuthTokens, Driver, GraphDatabase}
     testNeo4jConnection()
   }
 ```
+
+### 5. Download and Install Neo4j Desktop
+1. Create a new project
+2. Click on 'Add' -> 'Remove Connection' (for docker container)
+3. Give any 'name' and for connect url ```bolt://localhost:7687```
+4. Give the username and password which you passed during creation/running the neo4j docker container
+5. The Database will be added then connect -> open -> run queries
+6. Sample cypher query ```$ MATCH (n) RETURN n``` to return all the data present, and ```$ MATCH (n) DETACH DELETE n``` to delete all the data.
