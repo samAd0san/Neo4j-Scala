@@ -1,3 +1,5 @@
+<!-- Neovis.js is a high-level visualization library that connects directly to a Neo4j database using the Bolt protocol, runs Cypher queries, and automatically generates and styles graph visualizations based on node labels, properties, and centrality measures like pagerank, making it quick to set up but less customizable. -->
+
 <!DOCTYPE html>
 <html lang="en">
 
