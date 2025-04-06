@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cytoscape Neo4j Visualization</title>
+  <style>
+    #cy {
+      width: 100%;
+      height: 600px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Neo4j Graph with Cytoscape.js</h1>
+  <div id="cy"></div>
+
+  <script src="https://unpkg.com/cytoscape@3.21.1/dist/cytoscape.min.js"></script>
+  <script>
+    const cy = cytoscape({
+      container: document.getElementById('cy'),
+
+      elements: [
+        { data: { id: 'user1', label: 'User\n9729986610' } },
+        { data: { id: 'ip1', label: 'IP\n143.21.22.345' } },
+        { data: { source: 'user1', target: 'ip1', label: 'ACCESSED_FROM' } }
+      ],
+
+      style: [
+        {
+          selector: 'node',
+          style: {
+            'background-color': '#0074D9',
+            'label': 'data(label)',
+            'color': '#fff',
+            'text-valign': 'center',
+            'text-halign': 'center',
+            'font-size': '10px',
+            'text-wrap': 'wrap',
+            'text-max-width': 60,
+            'width': 60,
+            'height': 60,
+            'padding': '5px'
+          }
+        },
+        {
+          selector: 'edge',
+          style: {
+            'label': 'data(label)',
+            'width': 2,
+            'line-color': '#ccc',
+            'target-arrow-color': '#ccc',
+            'target-arrow-shape': 'triangle',
+            'curve-style': 'bezier',
+            'font-size': '8px',
+            'text-rotation': 'autorotate',
+            'text-margin-y': -5,
+            'color': '#333'
+          }
+        }
+      ],
+
+      layout: {
+        name: 'cose'
+      }
+    });
+  </script>
+</body>
+</html>
